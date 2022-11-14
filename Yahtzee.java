@@ -1,10 +1,4 @@
 
-/**
- * Write a description of class Yahtzee here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Yahtzee 
 {
     private Die6 die;
@@ -46,7 +40,28 @@ public class Yahtzee
     
     public String summarize() {
         int[] array = {this.die.getValue(), this.die1.getValue(), this.die2.getValue(), this.die3.getValue(), this.die4.getValue()};
-        int i = 0;
+        int one = 0;
+        int two = 0;
+        int three = 0;
+        int four = 0;
+        int five = 0;
+        int six = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == 1) {
+                one++;
+            } else if (array[i] == 2) {
+                two++;
+            } else if (array[i] == 3) {
+                three++;
+            } else if (array[i] == 4) {
+                four++;
+            } else if (array[i] == 5) {
+                five++;
+            } else if (array[i] == 6) {
+                six++;
+            }
+        }
+        return "1-" + one + " 2-" + two + " 3-" + three + " 4-" + four + " 5-" + five + " 6-" + six;
     }
     
     public String toString() {
